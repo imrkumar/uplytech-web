@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* index.css or relevant CSS file */
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dark body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+  }
+  
+  .dark a {
+    color: #1E90FF; /* Light blue links in dark mode */
+  }
+  
+  .dark .bg-light {
+    background-color: #333333; /* Dark background for elements with .bg-light */
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05);
+    }
+  }
+  
+  @keyframes float-delayed {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(20px) scale(1.05);
+    }
+  }
+  
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+    animation-delay: -4s;
+  }
+  
+
